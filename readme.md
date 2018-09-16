@@ -1,7 +1,7 @@
 # Terracon Construction Group Website Build
 This is a website build with Wordpress as a headless CMS, with the back end being implemented in Laravel.
 
-[http://terracon.tinybird.ca](Development Server)
+[Development Server](http://terracon.tinybird.ca)
 
 ## Todo
 * Implement text animations on homepage tile hover & slider
