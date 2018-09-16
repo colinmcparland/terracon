@@ -1,0 +1,151 @@
+/* 
+  Begin global styles
+ */
+html {
+  font-size: 12px;
+}
+
+body {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* 
+  Begin header styles
+ */
+.header {
+  font-family: $opensans;
+
+  a {
+    text-transform: uppercase;
+    color: $black;
+    padding: 0 8px;
+    font-weight: 600;
+  }
+}
+
+
+/* 
+  Call to action button styles
+ */
+
+.cta {
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  padding: 0 35px;
+  line-height: 45px;
+  display: inline-block;
+  transition: 0.3s;
+  margin: 25px 0;
+  border-radius: 5px;
+  background-color: $black;
+  color: $white;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+    text-decoration: none;
+  }
+
+  &.primary {
+    background-color: $yellow;
+    color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $yellow;
+    }
+  }
+
+  &.alternate {
+    background-color: $lightgrey;
+    color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $yellow;
+    }
+  }
+
+  &.second-alternate {
+    background-color: $yellow;
+    color: $black;
+    border: 2px solid $yellow;
+
+    &:hover {
+      background-color: $black;
+      color: $yellow;
+    }
+  }
+}
+
+
+
+/* 
+  Footer styles
+ */
+.footer {
+
+  &__background-wrapper {
+    background-color: $black;
+  }
+
+  &__heading-section {
+    padding: 150px 0;
+    text-align: center;
+  }
+
+  &__links {
+    padding: 25px 0;
+    border-top: 1px solid $darkgrey;
+
+    .p {
+      font-size: 1.2rem;
+    }
+
+    > * {
+      color: $white;
+    }
+
+    > div {
+      padding: 0;
+    }
+  }
+
+  .h1 {
+    font-weight: 700;
+    font-size: 4.3rem;
+    text-align: center;
+    color: $white;
+    margin-bottom: 50px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    color: $lightgrey;
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    outline: none !important;
+  }
+
+  input[type=submit] {
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+}
+
+
+

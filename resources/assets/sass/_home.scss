@@ -1,0 +1,422 @@
+/* 
+  General homepage styles
+ */
+
+.section-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* 
+    Slider section
+ */
+
+.home-slider {
+
+  &.slick-slider.slick-dotted {
+    margin-bottom: 0;
+  }
+
+  &__slide {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      opacity: 0.3;
+      z-index: 300;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    bottom: 0;
+
+    button {
+      border-radius: 0;
+      background-color: $white;
+      opacity: 0.5;
+      width: 8px;
+      height: 8px;
+      transition: 0.3s;
+
+      &::before {
+        content: '';
+      }
+    }
+
+    li.slick-active button {
+      opacity: 1;
+      background-color: $yellow;
+    }
+  }
+}
+
+
+
+/* 
+  First content area
+ */
+.content-area-1 {
+  margin: 50px 0;
+  padding: 50px 0;
+  background-repeat: repeat;
+
+  .img-container {
+    position: absolute;
+    right: 0;
+    padding-right: 0;
+  }
+
+  .text-container {
+    padding-right: 50px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: $grey;
+    line-height: 1.7;
+  }
+}
+
+
+
+
+/* 
+    Featured projects area
+ */
+.featured-projects {
+
+  .masonry-row {
+    height: 100%;
+
+    > *:not(.w-100) {
+      margin: 2px 0;
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+    }
+
+  }
+
+  .masonry-col:last-child {
+    .masonry-row {
+      padding-left: 4px;
+    }
+  }
+
+  &__title {
+    background: linear-gradient(90deg, $yellow 50%, #fff 50%);
+    margin: 0 0 1px 1px;
+
+    h2 {
+      margin-left: 30%;
+      padding: 100px 0;
+    }
+  }
+
+  &__cta {
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  &__image-tile {
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+    background-position: center;
+
+    &:hover {
+      background-size: auto 107%;
+
+      > div {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__tile-content {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s;
+
+    .p, .h4, .h1 {
+      color: $white;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,0.5);
+    }
+  }
+}
+
+
+
+
+/* 
+  Home services section
+ */
+.home-services {
+  background-image: url('/../../../../img/services_home_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h2 {
+    padding: 50px 0;
+    color: $white;
+  }
+
+  &__image-tile {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__service-tile {
+    background-color: $mediumgrey;
+    opacity: .9;
+    color: $white;
+    transition: 0.3s;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &:hover {
+      background-color: $yellow;
+      color: $black;
+      opacity: 1;
+    }
+
+    &--double-tall {
+
+    }
+  }
+
+  .col-40 {
+    width: 40%;
+    position: relative;
+  }
+
+  .col-20 {
+    width: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .home-services__service-tile {
+      width: 100%;
+      position: relative;
+    }
+  }
+}
+
+
+
+/* 
+  Begin styles for industries we serve section
+ */
+
+.home-industries {
+  margin-top: 250px;
+
+  &__title-area.col-8 {
+    background-color: $yellow;
+    padding-left: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    .cta {
+      border: 2px solid $black;
+    }
+
+    > * {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__tile-content {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s;
+
+    .p, .h4, .h1 {
+      color: $white;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,0.5);
+    }
+  }
+
+  &__tile-wrapper {
+    &.col-4 {
+      border: 2px solid #fff;
+      overflow: hidden;
+      padding: 0;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right:none;
+      }
+
+      > div {
+        transition: .5s ease-in-out;
+        background-size: auto 110%;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        > div {
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          background-size: auto 107%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* 
+  Begin styles for the clients section
+ */
+.home-clients {
+  padding: 150px 0;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cta {
+    margin-top: 75px;
+  }
+}
+
+
+
+/* 
+    Begins styles for home news section
+ */
+.home-news {
+
+  &__background-wrapper {
+    background-color: $lightgrey;
+    display: block;
+    width: 100%;
+  }
+
+  &__header-row {
+    padding: 50px 0;
+
+    a {
+      text-transform: uppercase;
+      color: $darkgrey;
+      font-weight: 700;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        color: $grey;
+        filter: brightness(110%);
+      }
+    }
+  }
+
+
+  &__news-tile {
+    height: 80vh;
+    background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,1);
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background-size: auto 107%;
+    }
+    
+    span {
+      padding: 50px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $lightgrey;
+      top: 0;
+      left: 0;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.6);
+
+        >* {
+          color: $lightgrey;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .h1 {
+      position: relative;
+      font-weight: 400;
+      z-index: 300;
+      margin-bottom: 75px;
+    }
+
+    a {
+      position: relative;
+      z-index: 300;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-decoration: underline;
+      color: $black;
+    }
+  }
+}
+
