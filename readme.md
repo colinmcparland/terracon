@@ -5,13 +5,10 @@ This is a website build with Wordpress as a headless CMS, with the back end bein
 
 ## Todo
 * Implement text animations on homepage tile hover & slider
-* See how important the parallax shapes are
-* Finish main menu, make it sticky
-* Add 'Our Difference' page
-* Add 'Projects' page
-* Add 'Portfolio' page
-* Add 'Services' page
-* Add 'Industries' page
+* Parallax shapes with new library rellax
+* Build single industry page
+* Build single case study page
+* Build single press release page
 * Add 'Press' page
 * Add 'Contact' page
 * Add 'Careers' page

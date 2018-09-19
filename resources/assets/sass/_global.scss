@@ -7,10 +7,22 @@ html {
 
 body {
   position: relative;
+
+  * {
+    font-family: $opensans;
+  }
 }
 
 img {
   max-width: 100%;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
 }
 
 
@@ -20,12 +32,149 @@ img {
  */
 .header {
   font-family: $opensans;
+  border-bottom: 1px solid $lightgrey;
+  position: relative;
+  z-index: 300;
+  background-color: $white;
 
-  a {
+  .sub-menu-visible {
+    display: flex;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: none;
+
+    &:not(.child-list) {
+      display: flex;
+      height: 100%;
+
+      > li {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 3px solid $white;
+
+        a {
+          padding: 15px 25px;
+        }
+
+        &:hover {
+          color: $yellow;
+          border-bottom: 3px solid $yellow;
+        }
+      }
+    }
+
+    .child-list {
+      display: none;
+      position: absolute;
+      top: 58px;
+      left: 0;
+      list-style-type: none;
+      flex-direction: column;
+      background-color: $black;
+      z-index: 300;
+      min-width: 100%;
+      padding: 15px 0;
+
+      &.sub-menu-visible {
+        display: flex;
+      }
+
+      li {
+        padding: 8px 12px;
+        white-space: nowrap;
+      }
+
+      a {
+        padding: 5px;
+      }
+
+      a, li {
+        color: $white;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+
+    .sub-child-list {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: $yellow;
+      height: auto;
+      flex-direction: column;
+      left: calc(100% + 10px);
+      width: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; 
+        border-right:10px solid $yellow;
+        top: 5px; 
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 100%;
+        display: block;
+        width: 10px; 
+        height: 100%; 
+        top: 0px;
+        background-color: transparent; 
+      }
+
+      li, a {
+        &:hover {
+          color: $lightgrey;
+        }
+      }
+
+      li a {
+        color: $black;
+        padding: 5px;
+      }
+
+      li {
+        border: none;
+        padding: 8px 12px;
+        white-space: normal;
+
+        &:hover {
+          border: none;
+          color: $white;
+        }
+      }
+
+    }
+  }
+
+  li {
+    list-style-type: none;
+    font-weight: 600;
     text-transform: uppercase;
     color: $black;
-    padding: 0 8px;
-    font-weight: 600;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $yellow;
+        text-decoration: none;
+      }
+    }
   }
 }
 

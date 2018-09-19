@@ -14,3 +14,35 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/our-difference', function () {
+    return view('difference');
+});
+
+Route::get('/project', function () {
+    return view('project');
+});
+
+Route::get('/case-study', function () {
+    return view('casestudy');
+});
+
+Route::get('/services', function () {
+    return view('services');
+});
+
+Route::get('/industry/*', function () {
+    return view('industry');
+});
+
+Route::get('/press', function () {
+    return view('press');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/careers', function () {
+    return view('careers');
+});

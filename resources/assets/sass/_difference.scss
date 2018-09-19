@@ -1,0 +1,403 @@
+/* 
+  Styles for the heading section
+ */
+
+.diff-heading {
+  padding: 200px 0;
+
+  .h1 {
+    font-size: 5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: $bluegrey;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('/../../../../img/square_bg.png');
+    background-repeat: repeat;
+  }
+}
+
+
+
+
+/* 
+  Styles for the process section
+ */
+.diff-process {
+  padding: 100px 0;
+
+  h1 {
+    font-size: 3.5rem;
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .h4 {
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $bluegrey;
+  }
+
+  img {
+    position: relative;
+    z-index: 100;
+  }
+
+  &__tile {
+    margin: 100px 0;
+    display: inline-block;
+
+    &--with-connecting-lines {
+
+      /* 
+          Start definitions for border boxes conncting the blurbs
+       */
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+      }
+
+      &.l1::after {
+        height: calc(100% + 175px);
+        width: 50%;
+        border-top: 3px dotted $diff-process-border-color;
+        border-right: 3px dotted $diff-process-border-color;
+        top: 50%;
+        right: -47%;
+      }
+
+      &.l2::after {
+        width: 40%;
+        border-top: 3px dotted $diff-process-border-color;
+        top: 50%;
+        right: -38%;
+      }
+
+      &.l3::after {
+        height: calc(100% + 175px);
+        width: 50%;
+        border-bottom: 3px dotted $diff-process-border-color;
+        border-right: 3px dotted $diff-process-border-color;
+        bottom: 50%;
+        right: -47%;
+      }
+
+      &.r1::after {
+        height: calc(100% + 175px);
+        width: 50%;
+        border-top: 3px dotted $diff-process-border-color;
+        border-left: 3px dotted $diff-process-border-color;
+        top: 50%;
+        left: -47%;
+      }
+
+      &.r2::after {
+        width: 40%;
+        border-top: 3px dotted $diff-process-border-color;
+        top: 50%;
+        left: -38%;
+      }
+
+      &.r3::after {
+        height: calc(100% + 175px);
+        width: 50%;
+        border-bottom: 3px dotted $diff-process-border-color;
+        border-left: 3px dotted $diff-process-border-color;
+        bottom: 50%;
+        left: -47%;
+      }
+
+    }
+
+  }
+
+  &__bg-wrapper {
+    background-image: url('/../../../../img/services_home_bg.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+
+
+/* 
+  Styles for the story section
+ */
+.diff-story {
+  padding: 100px 0;
+  position: relative;
+
+  h2 {
+    font-weight: 700;
+    font-size: 3.3rem;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: $bluegrey;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+
+  img {
+    position: relative;
+    z-index: 100;
+    max-width: none;
+    width: 120%;
+    padding-left: 25px;
+  }
+
+
+  &::after {
+    height: 50%;
+    width: 120vw;
+    left: -20vw;
+    top: 0;
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url('/../../../../img/square_bg.png');
+  }
+}
+
+
+
+
+
+/* 
+  Styles for the blurb section
+ */
+.diff-blurb {
+  padding: 50px 0;
+  background-color: $white;
+
+  h2 {
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  p {
+    color: $bluegrey;
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+/* 
+  Styles for the CTA section
+ */
+.diff-cta {
+  height: 65vh;
+  max-height: 65vh;
+  position: relative;
+
+  &__floating-box.col-4 {
+    top: 25%;
+    background-color: $yellow;
+    padding: 75px 50px;
+    position: absolute;
+    z-index: 200;
+
+    .h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    .cta {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      border:2px solid $yellow;
+
+      &:hover {
+        border: 2px solid $black;
+      }
+    }
+  }
+
+  &__bg-wrapper {
+    background-image: url('/../../../../img/services_home_bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+
+/* 
+  Styles for the leadership section
+ */
+.diff-leadership {
+  padding: 200px 0;
+  position: relative;
+
+  &::before {
+    background-image: url('/../../../../img/square_bg.png');
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 100px;
+    top: 0;
+  }
+
+  &__img-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__heading-section {
+    padding-top: 150px;
+
+    h2 {
+      font-weight: 700;
+      font-size: 3.2rem;
+    }
+
+    h4 {
+      color: $darkergrey;
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: $mediumgrey;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+
+      &:hover {
+        color: $black;
+        text-decoration: none;
+      }
+    }  
+  }
+
+  &__content-section {
+    margin: 25px 25px 0 0;
+
+    h2 {
+      font-weight: 700;
+      font-size: 3.2rem;
+    }
+
+    h4 {
+      color: $darkergrey;
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: $mediumgrey;
+      text-decoration: underline;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    &.first::after {
+      content: '';
+      height: 50px;
+      position: absolute;
+      top: -50px;
+      left: 25px;
+      border-left: 2px solid $yellow;
+    }
+
+    &.second::after {
+      content: '';
+      width: 50px;
+      position: absolute;
+      top: 25px;
+      right: -50px;
+      border-bottom: 2px solid $yellow;
+      z-index: 102;
+    }
+  }
+}
+
+
+/* 
+  Slider styles
+ */
+.diff-slider.slick-dotted.slick-slider {
+  margin-bottom: -5px;
+
+  img {
+    width: 100%;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    list-style-type: none;
+
+    li button {
+      border-radius: 0;
+      background-color: $white;
+      opacity: 0.5;
+      width: 8px;
+      height: 8px;
+      transition: 0.3s;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  li.slick-active button {
+    opacity: 1;
+    background-color: $yellow;
+  }
+}
+
+
+/* 
+  Begin styles for the clients section
+ */
+.diff-clients {
+  padding: 150px 0;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}

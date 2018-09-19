@@ -9,7 +9,7 @@
   <title>@yield('title')</title>
   <meta name='description'>@yield('description')</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Playfair+Display:400" rel="stylesheet">
   <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>

@@ -1,0 +1,13 @@
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 16px !important;
+  }
+
+  .container {
+      max-width: 1280px;
+  }
+
+  .child-list li, .sub-child-list li {
+    font-size: .8rem;
+  }
+}

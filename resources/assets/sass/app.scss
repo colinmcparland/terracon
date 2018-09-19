@@ -2,15 +2,20 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables & other partials
-@import 'variables';
-@import 'home';
-@import 'global';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 //  Slick slider
 @import '~slick-carousel/slick/slick-theme';
 @import '~slick-carousel/slick/slick';
+
+// Variables & other partials
+@import 'variables';
+@import 'home';
+@import 'difference';
+@import 'casestudies';
+@import 'project';
+@import 'services';
+@import 'responsive';
+@import 'global';
 

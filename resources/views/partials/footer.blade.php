@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="col-lg-5 col-12">
-            <input type="text">
+            <input type="text" placeholder='Your Email'>
           </div>
           <div class="col-lg-3 col-12">
              <input type="submit" class='cta third-alternate' value='SIGN UP'>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="col-3">
-        <h1 class='text-right'>SOCIAL</h1>
+        <h1 class='text-right'>Social Here</h1>
       </div>
     </div>
   </div>

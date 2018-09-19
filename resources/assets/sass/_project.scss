@@ -1,0 +1,68 @@
+.project {
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  &__filterby {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+
+  &__category.h4 {
+    color: $bluegrey;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 0 15px;
+
+    &.selected {
+      color: $yellow;
+      border-bottom: 2px solid $yellow;
+    }
+  }
+
+  &__header-area {
+    padding: 100px 0;
+  }
+
+  &__category-area {
+    padding-top: 50px;
+  }
+
+  &__tile-area.container-fluid {
+    width: calc(100% + 4px);
+    margin-left: -2px;
+  }
+
+  &__tile {
+    background-size: auto 110%;
+    transition: .3s ease-in-out;
+    background-position: center;
+  }
+
+  &__tile-wrapper.col-3 {
+    padding: 2px;
+    position: relative;
+  }
+
+  &__tile-meta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .h2 {
+      font-weight: 700;
+      color: $white;
+      font-size: 2.5rem;
+    }
+  }
+}
